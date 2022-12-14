@@ -1,0 +1,23 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<ul>
+    <br>
+    <a class="btn btn-primary" href="{% url 'New' %}">Nueva carrera</a>
+    <br>
+    <br>
+    {%for curso in object_list%}
+       <p> {{curso.nombre}} </p>
+       <p>
+            <a href="{% url 'Delete' curso.id %}">Borrar</a>
+            <a href="{% url 'Detail' curso.id %}">Ver</a>
+            <a href="{% url 'Edit' curso.id %}">Editar</a>
+            
+        </p>
+    {%endfor%}
+</ul>
+
+{% endblock %}

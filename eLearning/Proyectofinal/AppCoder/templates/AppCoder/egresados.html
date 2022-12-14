@@ -1,0 +1,22 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<ul>
+<h1>EGRESADOS</h1>
+<p>Ingrese un nuevo egresado</p>
+
+
+
+<br>
+<form action="" method="post">{% csrf_token %}
+	<table>
+	    {{egresoFormulario.as_table}}
+	</table>
+	<input type="submit",value="Enviar">
+</form>
+</ul>
+
+
+{% endblock %}

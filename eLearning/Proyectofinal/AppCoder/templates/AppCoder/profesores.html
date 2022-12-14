@@ -1,0 +1,23 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<ul>
+<h1>PROFESORES</h1>
+<p>Ingrese un nuevo profesor</p>
+
+
+Ingresar un profesor y asignatura:
+<br>
+<form action="" method="post">{% csrf_token %}
+	<table>
+	    {{profeFormulario.as_table}}
+	</table>
+	<input type="submit",value="Enviar">
+</form>
+
+
+
+{% endblock %}
+</ul>

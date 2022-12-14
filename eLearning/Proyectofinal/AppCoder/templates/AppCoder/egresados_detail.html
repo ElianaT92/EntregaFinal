@@ -1,0 +1,18 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<ul>
+<br>
+Egresado/a: {{egresados.nombre}}
+<br>
+Titulo: {{egresados.titulacion}}
+<br>
+Año de graduación: {{egresados.graduacion}}
+<br>
+Promedio obtenido: {{egresados.promedio}}
+<br>
+<a href="{% url 'ListEgreso'%}">Regresar</a>
+{% endblock %}
+</ul>

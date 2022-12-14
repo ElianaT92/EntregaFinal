@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<br>
+Nombre: {{curso.nombre}}
+<br>
+Inicia en: {{curso.inicio}}
+<br>
+Años de duración: {{curso.duracion}}
+<br>
+Precio en pesos: {{curso.costo}}
+<br>
+<a href="{% url 'List'%}">Regresar</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<ul>
+Fecha de inicio: {{inicio}}
+<br>
+Carreras: 
+{%for curso in cursos%}
+    {{curso.nombre}}
+    </br>
+{%endfor%}
+
+{% endblock %}
+</ul>

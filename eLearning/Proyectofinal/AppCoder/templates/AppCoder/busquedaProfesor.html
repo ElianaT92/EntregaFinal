@@ -1,0 +1,20 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<ul>
+<h1>BUSCA EL/LA PROFESOR/A </h1>
+<br>
+<p>Ingrese el área o asignatura</p>
+
+
+<form action="/AppCoder/buscarprofe/" method="get">{% csrf_token %}
+	
+	<input type="text", name="asignatura", id="asignatura">
+    <input type="submit",value="Buscar">
+</form>
+
+
+{% endblock %}
+</ul>

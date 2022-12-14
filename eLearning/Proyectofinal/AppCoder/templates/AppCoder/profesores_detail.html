@@ -1,0 +1,18 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<ul>
+<br>
+Profesor/a: {{profesores.nombre}}
+<br>
+Área: {{profesores.asignatura}}
+<br>
+Cargo: {{profesores.cargo}}
+<br>
+Profesora desde: {{profesores.actividad}}
+<br>
+<a href="{% url 'ListProfe'%}">Regresar</a>
+{% endblock %}
+</ul>

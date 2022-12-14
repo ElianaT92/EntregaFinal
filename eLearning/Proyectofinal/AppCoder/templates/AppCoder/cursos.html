@@ -1,0 +1,22 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<ul>
+<h1>CURSOS</h1>
+<p>Ingrese un nuevo curso</p>
+
+
+Ingresar un curso:
+<br>
+<form action="" method="post">{% csrf_token %}
+	<table>
+	    {{miFormulario.as_table}}
+	</table>
+	<input type="submit",value="Enviar">
+</form>
+
+</ul>
+
+{% endblock %}

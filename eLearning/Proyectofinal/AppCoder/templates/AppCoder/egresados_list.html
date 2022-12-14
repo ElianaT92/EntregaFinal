@@ -1,0 +1,23 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<ul>
+    <br>
+    <a class="btn btn-primary" href="{% url 'NewEgreso' %}">Nuevo egresado/a</a>
+    <br>
+    <br>
+    {%for egresado in object_list%}
+       <p> {{egresado.nombre}} </p>
+       <p>
+            <a href="{% url 'DeleteEgreso' egresado.id %}">Borrar</a>
+            <a href="{% url 'DetailEgreso' egresado.id %}">Ver</a>
+            <a href="{% url 'EditEgreso' egresado.id %}">Editar</a>
+            
+        </p>
+    {%endfor%}
+</ul>
+
+{% endblock %}

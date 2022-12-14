@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<ul>
+titulacion: {{titulacion}}
+<br>
+Egresados: 
+{%for egresado in egresados%}
+    {{egresado.nombre}}
+    </br>
+{%endfor%}
+
+{% endblock %}
+</ul>
